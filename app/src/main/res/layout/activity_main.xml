@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <Button
+            android:id="@+id/addCounterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addCounter"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+            android:id="@+id/counterContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/addCounterButton"
+            android:layout_marginTop="16dp" />
+
+    <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_below="@id/counterContainer"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+        <TableRow>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/getraenk"
+                    android:textStyle="bold"
+                    android:padding="8dp" />
+
+            <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/f"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+
+            <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/d"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+
+            <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+
+            <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/durchschnitt"
+                    android:textSize="18sp"
+                    android:padding="4dp"
+                    android:visibility="gone" />
+        </TableRow>
+
+        <TableRow>
+            <EditText
+                    android:id="@+id/editTextDrink"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:autofillHints="z.B. Bier"
+                    tools:ignore="LabelFor"/>
+
+            <EditText
+                    android:id="@+id/editTextNumber1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:autofillHints="1-10"
+                    tools:ignore="LabelFor"/>
+
+            <EditText
+                    android:id="@+id/editTextNumber2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:autofillHints="1-10"
+                    tools:ignore="LabelFor"/>
+
+            <EditText
+                    android:id="@+id/editTextNumber3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:autofillHints="1-10"
+                    tools:ignore="LabelFor"/>
+
+            <TextView
+                    android:id="@+id/textViewAverage"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/durchschnitt"
+                    android:textSize="18sp"
+                    android:padding="4dp"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/berechnen"
+            android:layout_below="@id/tableLayout" android:layout_marginTop="23dp"
+            android:layout_alignParentStart="true" android:layout_marginStart="11dp"/>
+
+    <ListView
+            android:id="@+id/getraenkeListe"
+            android:layout_width="match_parent"
+            android:layout_height="323dp"
+            android:layout_below="@id/calculateButton"
+            android:layout_marginTop="18dp"/>
+
+    <Button
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/getraenke_loeschen"
+            android:layout_below="@id/calculateButton"
+            android:layout_alignStart="@id/calculateButton"
+            android:layout_marginTop="-48dp" android:layout_alignParentEnd="true" android:layout_marginStart="236dp"
+            android:layout_marginEnd="9dp"/>
+
+</RelativeLayout>

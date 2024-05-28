@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Lachs</string>
+
+    <string name="addCounter">Hinzufügen</string>
+    <string name="delCounter">Counter löschen</string>
+    <string name="initial_counter_value">0</string>
+    <string name="increment_button_label">Lachs+</string>
+    <string name="decrement_button_label">Lachs-</string>
+    <string name="edit_text_default_value"> </string>
+
+    <string name="getraenke_loeschen">Getränke Löschen</string>
+    <string name="berechnen">Berechnen</string>
+
+    <string name="getraenk">Getränk</string>
+    <string name="f">F</string>
+    <string name="d">D</string>
+    <string name="n">N</string>
+    <string name="durchschnitt">Durchschnitt</string>
+</resources>
