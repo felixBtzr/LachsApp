@@ -13,7 +13,7 @@ LachsApp ist eine Android-Anwendung zur Verwaltung und Berechnung von Getränked
 
 1. **Clone das Repository**:
     ```sh
-    git clone https://github.com/username/LachsApp.git
+    git clone https://github.com/felix.Btzr/LachsApp.git
     ```
 2. **Öffne das Projekt in IntelliJ IDEA**:
     - Wähle `File > Open` und navigiere zum geklonten Repository.
