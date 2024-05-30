@@ -13,6 +13,7 @@ import com.google.gson.reflect.TypeToken
 
 class MainActivity : AppCompatActivity() {
 
+    // Deklaration der UI-Elemente
     private lateinit var addCounterButton: Button
     private lateinit var counterContainer: LinearLayout
     private lateinit var editTextNumber1: EditText
@@ -25,8 +26,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var clearButton: Button
     private lateinit var listAdapter: DrinkAdapter
 
+    // Liste zur Speicherung der Getränkedaten
     private val dataList = mutableListOf<Data>()
+    // SharedPreferences zur Speicherung der Daten
     private lateinit var sharedPreferences: SharedPreferences
+    // Gson-Instanz zur Konvertierung der Daten
     private val gson = Gson()
 
     @SuppressLint("SetTextI18n")
@@ -34,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Initialisieren der SharedPreferences
         sharedPreferences = getSharedPreferences("LachsAppPrefs", Context.MODE_PRIVATE)
 
         // Initialisieren der Views
@@ -55,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         listAdapter = DrinkAdapter(this, dataList)
         listView.adapter = listAdapter
 
+        // Klick-Listener für den Berechnungsbutton
         calculateButton.setOnClickListener {
             // Validierung und Hinzufügen der Daten zur Liste
             if (editTextDrink.text.isNullOrEmpty() || editTextNumber1.text.isNullOrEmpty() || editTextNumber2.text.isNullOrEmpty() || editTextNumber3.text.isNullOrEmpty()) {
@@ -93,11 +99,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Klick-Listener für den Clear-Button
         clearButton.setOnClickListener {
             // Datenliste und Anzeige löschen
             clearData()
         }
 
+        // Klick-Listener für den Button zum Hinzufügen eines Counters
         addCounterButton.setOnClickListener {
             // Dialog zum Hinzufügen eines Counters anzeigen
             showAddCounterDialog()
